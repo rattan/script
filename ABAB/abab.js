@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ABAB
-// @namespace    https://github.com/rattan/script/ABAB/abab.js
+// @namespace    https://github.com/rattan/script/tree/main/ABAB
 // @version      0.1
 // @description  Adblock allow dialog block
 // @author       rattan
@@ -10,7 +10,7 @@
 // @grant        none
 // ==/UserScript==
 
-console.log('Run ABAB')
+console.log('Run')
 let target = document.querySelector('body');
 
 let observer = new MutationObserver((mutations) => {
@@ -18,5 +18,3 @@ let observer = new MutationObserver((mutations) => {
     for (let dialog of document.getElementsByClassName('fc-ab-root')) dialog.remove()
 })
 observer.observe(target, { childList: true });
-
-
